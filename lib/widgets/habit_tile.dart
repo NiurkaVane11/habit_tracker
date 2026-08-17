@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+import '../screens/habit_detail_screen.dart';
+
 import '../models/habit.dart';
 import '../providers/habit_provider.dart';
 
@@ -18,6 +20,13 @@ class HabitTile extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
       child: ListTile(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => HabitDetailScreen(habit: habit)),
+          );
+        },
+
         leading: Text(habit.icono, style: const TextStyle(fontSize: 28)),
         title: Text(
           habit.nombre,

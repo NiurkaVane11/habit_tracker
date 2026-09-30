@@ -1,17 +1,29 @@
-# habit_tracker
+# Habit Tracker
 
-A new Flutter project.
+App móvil en **Flutter** para crear hábitos, marcarlos cada día y seguir tu progreso.
 
-## Getting Started
+## Funcionalidades
+- Crear hábitos con nombre e ícono
+- Marcar el hábito como cumplido cada día
+- **Racha** de días seguidos 🔥
+- Detalle de cada hábito con **gráfico semanal** y calendario de progreso
+- Datos guardados en el dispositivo (funciona sin internet)
 
-This project is a starting point for a Flutter application.
+## Tecnologías
+Flutter · Dart · Provider (estado) · Hive (almacenamiento local) · fl_chart (gráficos)
 
-A few resources to get you started if this is your first Flutter project:
+## Estructura
+```
+lib/
+  models/     Habit y HabitEntry (modelos Hive)
+  providers/  HabitProvider: lógica y cálculo de rachas
+  screens/    Inicio, nuevo hábito y detalle
+  services/   Inicialización de Hive
+  widgets/    HabitTile
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Ejecutar
+```bash
+flutter pub get
+flutter run
+```
